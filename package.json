@@ -1,0 +1,16 @@
+{
+  "name": "b71",
+  "version": "1.0.0",
+  "description": "Ordspel, inlämning 1: Testade algoritmer",
+  "main": "feedback.js",
+  "scripts": {
+    "type": "module",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,37 @@
+Fyrstegsmodellen.
+
+1. Definiera problemet tydligt
+2. Separera i mindre moment
+3. Experimentera med lösningar på varje moment
+4. Kombinera lösningarna
+
+Utforma en teststrategi
+Vilken testtyp ska vi använda? (e2e, integration, enhet etc)
+Hur ska vi isolera, d.v.s. vad testas och vad mockas bort?
+Vilka tester krävs för att täcka hela definitionen?
+
+Testdriven utveckling
+Skriv ett test för funktionalitet du inte byggt än
+Kör alla tester (som kommer misslyckas)
+Implementera funktionaliteten
+Kör alla tester (som bör lyckas, annars gå till steg 3)
+Börja om från början, med nästa funktionalitet
+
+Algoritm med fyrstegsmetoden och TDD
+Definiera problemet (för att kunna skriva test)
+Skriv ett test åt gången
+Separera problemet
+Experimentera fram lösningar som passerar testet
+Upprepa tills allt är kombinerat
+Demo: Title Case
+
+
+
+Kvar att göra:
+Täcks allt av testerna?
+Engelska kommentarer i koden?
+Import/export istället för require?
+/240313_1425
+
+
+
