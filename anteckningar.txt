@@ -30,8 +30,10 @@ Demo: Title Case
 Kvar att göra:
 Täcks allt av testerna?
 Engelska kommentarer i koden?
-Import/export istället för require?
-/240313_1425
+Import/export istället för require? [check]
+Bör forEach användas istället för for-loop?
+Ska inputs göras om till versaler? 
+/240314_1149
 
 
 

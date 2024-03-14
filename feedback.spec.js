@@ -1,7 +1,8 @@
-// -- Feedback test with jest. Guessed word vs chosen word -- //
+// -- Feedback function test with jest. Guessed word vs chosen word -- //
+// -- This test file contains a total of 5 tests -- //
 
 
-const feedback = require("./feedback");
+import feedback from './feedback';
 
 describe("Feedback function", () => {
   it("should return correct feedback when ALL letters are correct", () => {
@@ -30,20 +31,7 @@ describe("Feedback function", () => {
     ]);
   });
 
-  it("should return correct feedback when ONE letter is at right place, ONE letter is misplaced and THREE letters are incorrect", () => {
-    const chosenWord = "CYKLA";
-    const guessWord = "KYMBO";
-    const result = feedback(chosenWord, guessWord);
-    expect(result).toEqual([
-      { letter: "K", result: "misplaced" },
-      { letter: "Y", result: "correct" },
-      { letter: "M", result: "incorrect" },
-      { letter: "B", result: "incorrect" },
-      { letter: "O", result: "incorrect" },
-    ]);
-  });
-
-  it("should return correct feedback when ONE letter is at right place, ONE letter is misplaced and THREE letters are incorrect", () => {
+  it("should return correct feedback when ONE letter is correct, ONE letter is misplaced and THREE letters are incorrect", () => {
     const chosenWord = "CYKLA";
     const guessWord = "HALLÅ";
     const result = feedback(chosenWord, guessWord);
@@ -55,6 +43,30 @@ describe("Feedback function", () => {
       { letter: "Å", result: "incorrect" },
     ]);
   });
+
+it("should return correct feedback when ONE letter is misplaced and FOUR letters are incorrect", () => {
+  const chosenWord = "CYKLA";
+  const guessWord = "QWYMB";
+  const result = feedback(chosenWord, guessWord);
+  expect(result).toEqual([
+    { letter: "Q", result: "incorrect" },
+    { letter: "W", result: "incorrect" },
+    { letter: "Y", result: "misplaced" },
+    { letter: "M", result: "incorrect" },
+    { letter: "B", result: "incorrect" },
+  ]);
 });
 
-
+it("should return correct feedback when THREE letters is misplaced, ONE letter is correct and ONE letter is incorrect", () => {
+  const chosenWord = "CYKLA";
+  const guessWord = "CKLAM";
+  const result = feedback(chosenWord, guessWord);
+  expect(result).toEqual([
+    { letter: "C", result: "correct" },
+    { letter: "K", result: "misplaced" },
+    { letter: "L", result: "misplaced" },
+    { letter: "A", result: "misplaced" },
+    { letter: "M", result: "incorrect" },
+  ]);
+});
+});

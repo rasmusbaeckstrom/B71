@@ -1,6 +1,7 @@
 // -- Feedback function. Guessed word vs chosen word -- //
 
 
+
 // Det valda ordet
 const chosenWord = "PARIS";
 
@@ -8,7 +9,7 @@ const chosenWord = "PARIS";
 const guessWord = "SIRAP";
 
 // Funktion som tar valt och gissat ord som parametrar
-function feedback(chosenWord, guessWord) {
+export default function feedback(chosenWord, guessWord) {
   
   // Deklarerar en feedbackarray
   const feedbackArray = [];
@@ -59,5 +60,3 @@ function feedback(chosenWord, guessWord) {
 
 const result = feedback(chosenWord, guessWord);
 console.log(result);
-
-module.exports = feedback;
