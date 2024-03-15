@@ -32,8 +32,8 @@ Täcks allt av testerna?
 Engelska kommentarer i koden?
 Import/export istället för require? [check]
 Bör forEach användas istället för for-loop?
-Ska inputs göras om till versaler? 
-/240314_1149
+Ska inputs göras om till versaler? [check]
+/240315_1013
 
 
 

@@ -6,8 +6,8 @@ import feedback from './feedback';
 
 describe("Feedback function", () => {
   it("should return correct feedback when ALL letters are correct", () => {
-    const chosenWord = "CYKLA";
-    const guessWord = "CYKLA";
+    const chosenWord = "cykla".toUpperCase();
+    const guessWord = "cykla".toUpperCase();
     const result = feedback(chosenWord, guessWord);
     expect(result).toEqual([
       { letter: "C", result: "correct" },
@@ -19,8 +19,8 @@ describe("Feedback function", () => {
   });
 
   it("should return correct feedback when NO letter is correct", () => {
-    const chosenWord = "CYKLA";
-    const guessWord = "QWERT";
+    const chosenWord = "cykla".toUpperCase();
+    const guessWord = "qwert".toUpperCase();
     const result = feedback(chosenWord, guessWord);
     expect(result).toEqual([
       { letter: "Q", result: "incorrect" },
@@ -32,8 +32,8 @@ describe("Feedback function", () => {
   });
 
   it("should return correct feedback when ONE letter is correct, ONE letter is misplaced and THREE letters are incorrect", () => {
-    const chosenWord = "CYKLA";
-    const guessWord = "HALLÅ";
+    const chosenWord = "cykla".toUpperCase();
+    const guessWord = "hallå".toUpperCase();
     const result = feedback(chosenWord, guessWord);
     expect(result).toEqual([
       { letter: "H", result: "incorrect" },
@@ -45,8 +45,8 @@ describe("Feedback function", () => {
   });
 
 it("should return correct feedback when ONE letter is misplaced and FOUR letters are incorrect", () => {
-  const chosenWord = "CYKLA";
-  const guessWord = "QWYMB";
+  const chosenWord = "cykla".toUpperCase();
+  const guessWord = "qwymb".toUpperCase();
   const result = feedback(chosenWord, guessWord);
   expect(result).toEqual([
     { letter: "Q", result: "incorrect" },
@@ -58,8 +58,8 @@ it("should return correct feedback when ONE letter is misplaced and FOUR letters
 });
 
 it("should return correct feedback when THREE letters is misplaced, ONE letter is correct and ONE letter is incorrect", () => {
-  const chosenWord = "CYKLA";
-  const guessWord = "CKLAM";
+  const chosenWord = "cykla".toUpperCase();
+  const guessWord = "cklam".toUpperCase();
   const result = feedback(chosenWord, guessWord);
   expect(result).toEqual([
     { letter: "C", result: "correct" },

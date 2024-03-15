@@ -3,10 +3,10 @@
 
 
 // Det valda ordet
-const chosenWord = "PARIS";
+const chosenWord = "paris".toUpperCase();
 
 // Det gissade ordet
-const guessWord = "SIRAP";
+const guessWord = "sirap".toUpperCase();
 
 // Funktion som tar valt och gissat ord som parametrar
 export default function feedback(chosenWord, guessWord) {
