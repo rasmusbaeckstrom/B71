@@ -2,23 +2,23 @@
 
 
 
-// Det valda ordet
+// The chosen word
 const chosenWord = "paris".toUpperCase();
 
-// Det gissade ordet
+// The guessed word
 const guessWord = "sirap".toUpperCase();
 
-// Funktion som tar valt och gissat ord som parametrar
+// Function that takes chosen and guessed word as parameters
 export default function feedback(chosenWord, guessWord) {
   
-  // Deklarerar en feedbackarray
+  // Declare a feedback array
   const feedbackArray = [];
 
-  // Deklarerar två kartor, en för valt ord och en för gissat
+  // Declare two maps, one for chosen word and one for guessed
   const chosenWordMap = new Map();
   const guessWordMap = new Map();
 
-  // Fyller i kartan för valt ord
+  // Fills the map for chosen word
   for (let i = 0; i < chosenWord.length; i++) {
     const letter = chosenWord[i];
     if (!chosenWordMap.has(letter)) {
@@ -27,7 +27,7 @@ export default function feedback(chosenWord, guessWord) {
     chosenWordMap.get(letter).push(i);
   }
 
-  // Fyller i kartan för gissat ord
+  // Fills the map for guessed word
   for (let i = 0; i < guessWord.length; i++) {
     const letter = guessWord[i];
     if (!guessWordMap.has(letter)) {
@@ -36,7 +36,7 @@ export default function feedback(chosenWord, guessWord) {
     guessWordMap.get(letter).push(i);
   }
 
-  // Loopar igenom gissat ord för att ge feedback
+  // Loops through guessed word to provide feedback
   for (let i = 0; i < guessWord.length; i++) {
     const letter = guessWord[i];
     if (chosenWordMap.has(letter)) {

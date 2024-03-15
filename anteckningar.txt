@@ -28,12 +28,13 @@ Demo: Title Case
 
 
 Kvar att göra:
-Täcks allt av testerna?
-Engelska kommentarer i koden?
-Import/export istället för require? [check]
-Bör forEach användas istället för for-loop?
-Ska inputs göras om till versaler? [check]
-/240315_1013
+Täcks allt av testerna? [check]
+Engelska kommentarer i koden [check]
+Import/export istället för require [check]
+Ska inputs göras om till versaler [check]
 
+Bör forEach användas istället för for-loop? Finns det ännu bättre alternativ?
+Moment B
 
+/240315_1136
 
