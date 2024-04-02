@@ -11,7 +11,7 @@
 import feedback from './feedback';
 
 describe("Feedback function", () => {
-  // Test to ensure that correct feedback is returned when all letters are correct.
+  // 1: Test to ensure that correct feedback is returned when all letters are correct.
   it("should return correct feedback when ALL letters are correct", () => {
     const chosenWord = "cykla".toUpperCase();
     const guessWord = "cykla".toUpperCase();
@@ -25,7 +25,7 @@ describe("Feedback function", () => {
     ]);
   });
 
-  // Test to ensure that correct feedback is returned when no letters are correct.
+  // 2: Test to ensure that correct feedback is returned when no letters are correct.
   it("should return correct feedback when NO letter is correct", () => {
     const chosenWord = "cykla".toUpperCase();
     const guessWord = "qwert".toUpperCase();
@@ -39,7 +39,8 @@ describe("Feedback function", () => {
     ]);
   });
   
-  // Test to ensure that correct feedback is returned when one letter is correct, one letter is misplaced and three letters are incorrect.
+  // 3: Test to ensure that correct feedback is returned when one letter is correct, one letter is misplaced and three letters are incorrect.
+  // Additionally, the letter 'L' appears twice in the guessed word 'hallå'. The first 'L' is marked as 'incorrect' because the second 'L' is already correctly placed in the chosen word 'cykla'.
   it("should return correct feedback when ONE letter is correct, ONE letter is misplaced and THREE letters are incorrect", () => {
     const chosenWord = "cykla".toUpperCase();
     const guessWord = "hallå".toUpperCase();
@@ -53,7 +54,7 @@ describe("Feedback function", () => {
     ]);
   });
 
-// Test to ensure that correct feedback is returned when one letter is misplaced and four letters are incorrect.  
+// 4: Test to ensure that correct feedback is returned when one letter is misplaced and four letters are incorrect.  
 it("should return correct feedback when ONE letter is misplaced and FOUR letters are incorrect", () => {
   const chosenWord = "cykla".toUpperCase();
   const guessWord = "qwymb".toUpperCase();
@@ -67,7 +68,7 @@ it("should return correct feedback when ONE letter is misplaced and FOUR letters
   ]);
 });
 
-// Test to ensure that correct feedback is returned when three letters are misplaced, one letter is correct and one letter is incorrect.  
+// 5: Test to ensure that correct feedback is returned when three letters are misplaced, one letter is correct and one letter is incorrect.  
 it("should return correct feedback when THREE letters is misplaced, ONE letter is correct and ONE letter is incorrect", () => {
   const chosenWord = "cykla".toUpperCase();
   const guessWord = "cklam".toUpperCase();
